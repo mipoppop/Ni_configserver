@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: Ni_configserver_production
-  username: Ni_configserver
+  database: <%= ENV['NI_CONFIGSERVER_DATABASE_NAME'] %>
+  username: <%= ENV['NI_CONFIGSERVER_DATABASE_USER'] %>
   password: <%= ENV['NI_CONFIGSERVER_DATABASE_PASSWORD'] %>
+  host: <%= ENV['NI_CONFIGSERVER_DATABASE_HOST'] %>
